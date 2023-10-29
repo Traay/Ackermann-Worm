@@ -1,0 +1,15 @@
+list = [100]
+row = 1
+while len(list) > 0:
+    print(row,list)
+    row = row+1
+    if list[-1] > 0:
+        last = [list[-1]-1]
+        list.pop()
+        c = row
+        while c != 0:
+            list = list+last
+            c = c-1
+    else:
+        list.pop()
+print("Terminated in",row,"steps")
